@@ -88,7 +88,10 @@ Visit `http://127.0.0.1:5000/` in your browser.
 
 ## 📸 Screenshot
 
-*Add a screenshot of your UI here (optional)*
+## 📸 Screenshot
+
+![Smart Sorting UI](static/Screenshot.png)
+
 
 ---
 
