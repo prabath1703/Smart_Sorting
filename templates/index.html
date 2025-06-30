@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NutriGaze</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      width: 100%;
+      height: 100%;
+      font-family: Arial, sans-serif;
+    }
+
+    nav {
+      background-color: #111;
+      color: #fff;
+      padding: 1em 2em;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 1.5em;
+      border-bottom: 2px solid transparent;
+    }
+
+    nav a:hover,
+    nav a.active {
+      border-bottom: 2px solid red;
+    }
+
+    section {
+      display: none;
+      padding-top: 100px;
+    }
+
+    section.active {
+      display: block;
+    }
+
+    #home {
+      background-image: url("{{ url_for('static', filename='background.jpeg') }}");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      color: white;
+      height: 100vh;
+      text-align: center;
+      padding: 20px;
+    }
+
+    #home h3 {
+      background: rgba(0, 0, 0, 0.5);
+      padding: 10px 20px;
+      border-radius: 30px;
+      font-weight: normal;
+      font-size: 1.5rem;
+    }
+
+    #home h1 {
+      font-size: 3rem;
+      margin-top: 20px;
+    }
+
+    #home p {
+      margin-top: 10px;
+      font-size: 1.2rem;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .btn {
+      background-color: transparent;
+      border: 2px solid white;
+      padding: 12px 24px;
+      color: white;
+      cursor: pointer;
+      margin-top: 30px;
+      font-size: 1rem;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    #about {
+      background-color: #fff;
+      color: #333;
+    }
+
+    .container {
+      padding: 80px 40px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    h4 {
+      color: crimson;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    .title-desc {
+      font-weight: bold;
+      margin-bottom: 30px;
+    }
+
+    .about-section {
+      display: flex;
+      flex-direction: row;
+      gap: 40px;
+    }
+
+    .about-section > div {
+      flex: 1;
+    }
+
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    ul li::before {
+      content: '\2713';
+      color: crimson;
+      margin-right: 10px;
+    }
+
+    .learn-btn {
+      margin-top: 20px;
+      padding: 10px 20px;
+      border: 2px solid crimson;
+      background-color: transparent;
+      color: crimson;
+      border-radius: 20px;
+      cursor: pointer;
+    }
+
+    #predict {
+      background-color: #fff;
+      color: #333;
+      text-align: center;
+      padding: 100px 20px;
+    }
+
+    .upload-section {
+      margin-bottom: 30px;
+    }
+
+    input[type="file"] {
+      padding: 10px;
+      width: 60%;
+      max-width: 500px;
+      border: none;
+      outline: none;
+      background-color: #f9f9f9;
+      font-size: 1rem;
+    }
+
+    button.predict {
+      background-color: #28a745;
+      color: white;
+      padding: 12px 30px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+
+    button.predict:hover {
+      background-color: #218838;
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <div><strong>NUTRIGAZE</strong></div>
+    <div>
+      <a href="#" class="nav-link active" data-target="home">Home</a>
+      <a href="#" class="nav-link" data-target="about">About</a>
+      <a href="#" class="nav-link" data-target="predict">Predict</a>
+    </div>
+  </nav>
+
+  <section id="home" class="active">
+    <h3>Welcome to <strong>NutriGaze</strong></h3>
+    <h1>GREENGUARD INSIGHTS</h1>
+    <p>We are a team of innovative scientists and technologists dedicated to ensuring your produce is always fresh and healthy.</p>
+    <button class="btn">GET STARTED</button>
+  </section>
+
+  <section id="about">
+    <div class="container">
+      <h4>ABOUT</h4>
+      <h2>Learn More <span style="color: crimson">About Us</span></h2>
+      <p class="title-desc">NutriGaze is a pioneering organization dedicated to enhancing the quality and safety of your fruits and vegetables.</p>
+      <div class="about-section">
+        <div>
+          <ul>
+            <li>Comprehensive analysis and grading of fruits and vegetables based on ripeness and nutritional content.</li>
+            <li>Continuous monitoring of produce freshness from farm to table.</li>
+            <li>Innovative solutions to minimize food waste by identifying and separating rotten produce early in the supply chain.</li>
+          </ul>
+        </div>
+        <div>
+          <p>Our team is our greatest asset. We are a diverse group of experts in agricultural science, data analytics, software engineering, and food technology. Together, we tackle challenges in food quality and safety.</p>
+          <button class="learn-btn">Learn More</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ✅ Predict section -->
+ <section id="predict">
+  <h1>Image Classification</h1>
+  <form action="/predict" method="POST" enctype="multipart/form-data">
+    <div class="upload-section">
+      <label for="imageUpload">Upload Your Image:</label>
+      <input type="file" id="imageUpload" name="pc_image" accept="image/*" required>
+    </div>
+    <button type="submit" class="predict">Predict</button>
+  </form>
+  
+</section>
+
+  <script>
+    const navLinks = document.querySelectorAll(".nav-link");
+    const sections = document.querySelectorAll("section");
+
+    navLinks.forEach(link => {
+      link.addEventListener("click", (e) => {
+        e.preventDefault();
+        const targetId = link.getAttribute("data-target");
+
+        sections.forEach(section => {
+          section.classList.remove("active");
+        });
+        document.getElementById(targetId).classList.add("active");
+
+        navLinks.forEach(link => link.classList.remove("active"));
+        link.classList.add("active");
+      });
+    });
+  </script>
+</body>
+</html>
