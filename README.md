@@ -90,7 +90,7 @@ Visit `http://127.0.0.1:5000/` in your browser.
 
 ## 📸 Screenshot
 
-![Smart Sorting UI](static/Screenshot.png)
+![Smart Sorting UI](static/Screenshot.png.png)
 
 
 ---
