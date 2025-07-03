@@ -90,10 +90,10 @@ Visit `http://127.0.0.1:2222/` in your browser.
 
 ## 📸 Screenshot
 
-![Smart Sorting UI](static/Screenshot1.png)
-![Smart Sorting UI](static/Screenshot2.png)
-![Smart Sorting UI](static/Screenshot3.png)
-![Smart Sorting UI](static/Screenshot4.png)
+![Smart Sorting UI](static/assets/Screenshot1.png)
+![Smart Sorting UI](static/assets/Screenshot2.png)
+![Smart Sorting UI](static/assets/Screenshot3.png)
+![Smart Sorting UI](static/assets/Screenshot4.png)
 
 ---
 
