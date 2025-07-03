@@ -62,7 +62,7 @@ Ensure `healthy_vs_rotten.h5` is in the root directory (same level as `app.py`).
 ```bash
 python app.py
 ```
-Visit `http://127.0.0.1:5000/` in your browser.
+Visit `http://127.0.0.1:2222/` in your browser.
 
 ---
 
@@ -90,8 +90,10 @@ Visit `http://127.0.0.1:5000/` in your browser.
 
 ## 📸 Screenshot
 
-![Smart Sorting UI](static/Screenshot.png.png)
-
+![Smart Sorting UI](static/Screenshot1.png)
+![Smart Sorting UI](static/Screenshot2.png)
+![Smart Sorting UI](static/Screenshot3.png)
+![Smart Sorting UI](static/Screenshot4.png)
 
 ---
 
