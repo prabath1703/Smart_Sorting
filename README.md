@@ -1,5 +1,5 @@
 
-# 🧠 Smart Sorting: AI-Powered Produce Quality Detection 🍎🥦
+# 🧠 Smart Sorting: Transfer Learning For Identifying Rotten Fruits And Vegetables 🍎🥦
 
 Smart Sorting is a deep learning-powered web application that classifies fruits and vegetables as **healthy** or **rotten** using a fine-tuned VGG16 model. Built using Python, Flask, and Keras, this tool simplifies visual food quality inspection with high accuracy and ease of use.
 
