@@ -86,7 +86,6 @@ Visit `http://127.0.0.1:2222/` in your browser.
 
 ---
 
-## 📸 Screenshot
 
 ## 📸 Screenshot
 
@@ -113,7 +112,3 @@ Visit `http://127.0.0.1:2222/` in your browser.
 - GitHub: [@prabath1703](https://github.com/prabath1703)
 
 ---
-
-## 📄 License
-
-This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.
